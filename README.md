@@ -43,8 +43,6 @@ Port: Enter 5439.
 * plugins/operators/load_fact.py: Operator that loads data from redshift staging tables into fact table
 * plugins/operators/data_quality.py: Operator that validates data quality in redshift tables
 
-![imgs/data-pipeline](imgs/dag-code.png)
-
 ### Sparkify DAG
 DAG parameters:
 
@@ -54,8 +52,6 @@ DAG parameters:
 * Retries happen every 5 minutes
 * Catchup is turned off
 * Email are not sent on retry
-
-![imgs/data-pipeline](imgs/airflow-details-dag.png)
 
 DAG contains default_args dict bind to the DAG, with the following keys:
    
@@ -67,8 +63,6 @@ DAG contains default_args dict bind to the DAG, with the following keys:
     * Catchup
 
 * Task dependencies are set as following:
-
-![imgs/data-pipeline](imgs/dag.png)
 
 ### Operators
 Operators create necessary tables, stage the data, transform the data, and run checks on data quality.
